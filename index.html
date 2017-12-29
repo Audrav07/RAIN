@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wine App</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div>
+        <nav class="navbar navbar-light navbar-expand-md navigation-clean">
+            <div class="container"><a class="navbar-brand" href="#">Company Name</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse"
+                    id="navcol-1">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item" role="presentation"><a class="nav-link active" href="#" id="about">About </a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="#" id="signUp">Sign Up</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="#" id="signIn">Sign In</a></li>
+                        <li class="dropdown show"><a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="true" href="#" id="menu">Categories </a>
+                            <div class="dropdown-menu show" role="menu"><a class="dropdown-item" role="presentation" href="#" id="Cellar">Cellar </a><a class="dropdown-item" role="presentation" href="#" id="Restaurants">Restaurants </a><a class="dropdown-item" role="presentation" href="#">Third Item</a></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div id="mainPage">
+        <div class="jumbotron">
+            <h1>Browse Wines</h1>
+            <form class="search-form">
+                <div class="input-group">
+                    <div class="input-group-addon"><span><i class="fa fa-search"></i></span></div><input class="form-control" type="text" placeholder="I am looking for..">
+                    <div class="input-group-btn"><button class="btn btn-light" type="button">Search </button></div>
+                </div>
+            </form>
+            <p></p>
+        </div>
+    </div>
+    <footer>
+        <div class="row">
+            <div class="col-sm-6 col-md-4 footer-navigation">
+                <h3><a href="#">Company Name</a></h3>
+                <p class="links"><a href="#">Home</a><strong> · </strong><a href="#">Cellar </a><strong> · </strong><a href="#">Restaurants </a><strong> · </strong><a href="#">About</a><strong> · </strong><a href="#">Faq</a><strong> · </strong><a href="#">Contact</a></p>
+                <p
+                    class="company-name">Company Name © 20157</p>
+            </div>
+            <div class="col-sm-6 col-md-4 footer-contacts">
+                <div><span class="fa fa-map-marker footer-contacts-icon"> </span>
+                    <p><span class="new-line-span">1901 E Asbury Ave </span> Denver, Co</p>
+                </div>
+                <div><i class="fa fa-envelope footer-contacts-icon"></i>
+                    <p> <a href="#" target="_blank">support@company.com</a></p>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-md-4 footer-about">
+                <h4>About the company</h4>
+                <p> Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+                </p>
+                <div class="social-links social-icons"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a><a href="#"><i class="fa fa-github"></i></a></div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
