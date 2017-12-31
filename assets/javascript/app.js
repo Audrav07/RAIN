@@ -4,6 +4,11 @@
 
 //========================== signup/signin form ========================//
 
+$(window).on('load', function(){
+
+
+
+$("#signInModal").modal("show");
 
 $(".log-in").click(function(){
     $(".signIn").addClass("active-dx");
@@ -25,10 +30,10 @@ $(".back").click(function(){
 
 // Validating Empty Field
 function check_empty() {
-if (document.getElementById('Insert eMail').value == "" || document.getElementById('email').value == "" || document.getElementById('msg').value == "") {
+if (document.getElementById('Email').value == "" || document.getElementById('email').value == "" || document.getElementById('msg').value == "") {
 alert("Fill All Fields !");
 } else {
-document.getElementById('form').submit();
+document.getElementById('my-form').submit();
 alert("Form Submitted Successfully...");
 }
 }
@@ -41,6 +46,9 @@ function div_hide(){
 document.getElementById('abc').style.display = "none";
 }
 
+
+
+});
 //======================= end form ==================================//
 
 

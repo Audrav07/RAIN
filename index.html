@@ -21,9 +21,9 @@
                     id="navcol-1">
                     <ul class="nav navbar-nav ml-auto">
                         <li class="nav-item" role="presentation"><a class="nav-link " href="#" id="about">About </a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="#" id="signUp">Sign Up</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="#" id="signUp" data-toggle="modal" data-target="#modalsignUpForm">Sign Up</a></li>
 
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="#" id="signIn" data-toggle="modal" data-target="#signInModal">Sign In</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="#" id="signIn" data-toggle="modal" data-target="#modalsignInForm">Sign In</a></li>
  
 
                         <li class="dropdown "><a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="true" href="#" id="menu">Categories </a>
@@ -56,9 +56,9 @@
         <p>Just enter your email address</br>
 and your password to join.
         </p>
-        <input class="w100" type="email" placeholder="Insert Email" reqired autocomplete='off' />
-        <input type="password" placeholder="Insert Password" reqired />
-        <input type="password" placeholder="Verify Password" reqired />
+        <input class="w100" type="email" placeholder=" Email" reqired autocomplete='off' />
+        <input type="password" placeholder=" Username" reqired />
+        <input type="password" placeholder=" Password" reqired />
         <button class="form-btn sx log-in" type="button">Log In</button>
         <button class="form-btn dx" type="submit">Sign Up</button>
     </form>
@@ -66,8 +66,8 @@ and your password to join.
         <h3>Welcome</br>Back !</h3>
         <button class="fb" type="button">Log In With Facebook</button>
         <p>- or -</p>
-        <input type="email" placeholder="Insert Email" autocomplete='off' reqired />
-        <input type="password" placeholder="Insert Password" reqired />
+        <input type="email" placeholder=" Email" autocomplete='off' reqired />
+        <input type="password" placeholder="Password" reqired />
         <button class="form-btn sx back" type="button">Back</button>
         <button class="form-btn dx" type="submit">Log In</button>
     </form>
@@ -77,8 +77,48 @@ and your password to join.
 </div>
 </div>
 
+
+<div id="modalsignUpForm" class="modal fade">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <!-- <div class="modal-header">
+            </div> -->
+            <!-- <div class="modal-body"> -->
+
+<form class="signUpModal" id="my-form">
+        <h3>Create Your Account</h3>
+        <p>Just enter your email address</br>
+and your password to join.
+        </p>
+        <input class="w100" type="email" placeholder="Email" reqired autocomplete='off' />
+        <input type="password" placeholder="Password" reqired />
+        <input type="password" placeholder="Password" reqired />
+     <button class="form-btn dxxx" type="submit">Sign Up</button>
+    </form>
+</div>
+</div>
+</div>
+<!-- </div> -->
+
+<div id="modalsignInForm" class="modal fade">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+<form class="signInForm" id="mySignInForm">
+        <h4 class="welcome">Welcome</br>Back!</h4>
+        <button class="fb" type="button">Log In With Facebook</button>
+        <p class="or">- or -</p>
+        <input type="email" class="inputEmail" placeholder=" Email" autocomplete='off' reqired />
+        <input type="password" class="inputPassword" placeholder=" Password" reqired />
         
-     
+        <button class="form-btn dxx" id="form-btns" type="submit">Log In</button>
+    </form>
+     </div>
+</div>
+</div>
+
+
+
    <!--    <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary">Save changes</button> -->
@@ -111,8 +151,7 @@ and your password to join.
             <div class="col-sm-6 col-md-4 footer-navigation">
                 <h3><a href="#">Company Name</a></h3>
                 <p class="links"><a href="#">Home</a><strong> · </strong><a href="#">Cellar </a><strong> · </strong><a href="#">Restaurants </a><strong> · </strong><a href="#">About</a><strong> · </strong><a href="#">Faq</a><strong> · </strong><a href="#">Contact</a></p>
-                <p
-                    class="company-name">Company Name © 20157</p>
+                <p class="company-name">Company Name © 20157</p>
             </div>
             <div class="col-sm-6 col-md-4 footer-contacts">
                 <div><span class="fa fa-map-marker footer-contacts-icon"> </span>

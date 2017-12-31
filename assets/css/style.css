@@ -334,6 +334,8 @@ div.social-links {
     padding: 30px 20px 0 20px;
     box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.25);
     box-sizing: border-box;
+    margin-left: 70px;
+    top:80px;
 }
 
 p {
@@ -567,8 +569,148 @@ input {
 }
 
 
-h3{
+.welcome{
+font-family: 'Dosis';
+    font-size: 45px;
+    text-transform: uppercase;
+    color: #3b3b3b;
+    margin-bottom: 30px;
+
   
 }
 
+.modal-content{
+  border: none;
+}
+
+#mySignInForm{
+  position: absolute;
+    text-align: center;
+    background: #fff;
+    width: 410px;
+    height: 570px;
+    border-radius: 5px;
+    padding: 30px 20px 0 20px;
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+margin-left: -37px;
+
+    z-index: 1;
+        transform: perspective(100px) translate3d(100px, 0px, -30px);
+        
+
+}
+
+#form-btns{
+   /*right: 0;*/
+   margin-left: 100px;
+    border-radius: 0 0 5px 0;
+    background-color: #552329;
+    color: #fff;
+}
+
+button.fb {
+    border: none;
+    background: #3b5998;
+    width: 278px;
+    height: 37px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 4px;
+    border: 1px solid #29487d;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition:all 0.3s linear;
+}
+button.fb:hover {
+    background: #fff;
+    color: #3b5998;
+}
+
+ #form-btns {
+    position: absolute;
+    width: 50%;
+    height: 60px;
+    bottom: 0;
+    border: 0;
+    font-family: 'Dosis';
+    font-size: 24px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+button.form-btn.sx {
+    left: 0;
+    border-radius: 0 0 0 5px;
+    background-color: rgba(85, 35, 41, 0.35);
+    color: #fff;
+    transition:all 0.3s linear;
+}
+
+button.form-btn.sx:hover {
+    background-color:rgba(144, 47, 55, 0.65);
+    color: #fff;
+}
+
+button.form-btn.sx.back {
+    background-color: rgba(0, 0, 0, 0.15);
+    transition:all 0.3s linear;
+}
+
+button.form-btn.sx.back:hover {
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+button.form-btn.dxx {
+  left:2px;
+  top:450px;
+   /* right: 0;*/
+    border-radius: 0 0 5px 0;
+    background-color: #552329;
+    color: #fff;
+}
+
+.inputEmail {
+    border: none;
+    border-bottom: 1px solid #9e934d;
+    width: 85%;
+    font-family: 'Roboto';
+    color: #3b3b3b;
+    text-align: center;
+    font-size: 29px;
+    font-weight:100;
+    margin-bottom:25px;
+}
+
+.inputPassword{
+   border: none;
+    border-bottom: 1px solid #9e934d;
+    width: 85%;
+    font-family: 'Roboto';
+    color: #3b3b3b;
+    text-align: center;
+    font-size: 29px;
+    font-weight:100;
+    margin-bottom:25px;
+}
+
+.or{
+  font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #3b3b3b;
+    margin-bottom: 40px;
+}
+
+button.form-btn.dxxx {
+  left:81px;
+  top:390px;
+   /* right: 0;*/
+    border-radius: 0 0 5px 0;
+    background-color: #552329;
+    color: #fff;
+}
 
