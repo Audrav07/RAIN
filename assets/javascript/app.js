@@ -5,7 +5,7 @@
 //========================== signup/signin form ========================//
 
 $(window).on('load', function(){
-
+ // initApp();
 
 
 $("#signInModal").modal("show");
@@ -50,5 +50,3 @@ document.getElementById('abc').style.display = "none";
 
 });
 //======================= end form ==================================//
-
-
