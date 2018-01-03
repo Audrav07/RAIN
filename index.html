@@ -12,7 +12,7 @@
     
     <link rel="stylesheet" href="assets/css/style.css">
   
-    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+   
 
 </head>
 
@@ -21,7 +21,7 @@
     <!-- navigation bar -->
     <div>
         <nav class="navbar navbar-light navbar-expand-md navigation-clean">
-            <div class="container"><a class="navbar-brand" href="#">Company Name</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="container"><a class="navbar-brand" href="#">Veeno</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse"
                     id="navcol-1">
                     <ul class="nav navbar-nav ml-auto">
@@ -57,8 +57,8 @@ and your password to join.
         <input class="w100" type="email" placeholder=" Email" id="user-email" reqired autocomplete='off' />
         <input type="user-name" placeholder=" Username" reqired />
         <input type="password" placeholder=" Password" id="userPassword" reqired />
-        <button class="form-btn sx log-in" id="login" type="button">Log In</button>
-        <button class="form-btn dx" id="signUpBtn" type="submit">Sign Up</button>
+        <button class="form-btn sx log-in" id="login" type="button" >Log In</button>
+        <button class="form-btn dx" id="signUpBtn" type="submit" >Sign Up</button>
     </form>
     <form class="signIn" id="mySignInForm">
         <h3>Welcome</br>Back!</h3>
@@ -68,7 +68,7 @@ and your password to join.
         <input type="email" placeholder=" Email" autocomplete='off' id="user-email" reqired />
         <input type="password" placeholder="Password" id="currentPassword" reqired />
         <button class="form-btn sx back" id="backBtn" type="button">Back</button>
-        <button class="form-btn dx" id="signInBtn" type="submit">Log In</button>
+        <button class="form-btn dx" id="signInBtn" type="submit" data-dismiss="modal" >Log In</button>
     </form>
      </div>
 </div>
@@ -151,9 +151,9 @@ and your password to join.
     <footer>
         <div class="row">
             <div class="col-sm-6 col-md-4 footer-navigation">
-                <h3><a href="#">Company Name</a></h3>
+                <h3><a href="#">Veeno</a></h3>
                 <p class="links"><a href="#">Home</a><strong> · </strong><a href="#">Cellar </a><strong> · </strong><a href="#">Restaurants </a><strong> · </strong><a href="#">About</a><strong> · </strong><a href="#">Faq</a><strong> · </strong><a href="#">Contact</a></p>
-                <p class="company-name">Company Name © 20157</p>
+                <p class="company-name">Veeno © 20157</p>
             </div>
             <div class="col-sm-6 col-md-4 footer-contacts">
                 <div><span class="fa fa-map-marker footer-contacts-icon"> </span>
@@ -176,7 +176,7 @@ and your password to join.
     </footer>
 
 
-    
+<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
     <script src="assets/js/jquery.min.js"></script>
      <script src="./assets/javascript/app.js"></script>
        <script src="assets/javascript/userAuth.js"></script>
