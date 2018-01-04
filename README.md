@@ -1,2 +1,0 @@
-# RAIN
-Project 1
