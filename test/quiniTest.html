@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quini Test</title>
+</head>
+<body>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function () { 
+
+		let key = new String();
+
+		let headers = new Headers();
+		headers.append('Accept', 'application/json');
+		headers.append('Content-Type', 'application/x-www-form-urlencoded;charset=UTF-8');
+
+		let data = new FormData();
+		data.append('email','ian.haizlip@gmail.com');
+		data.append('password','danmit5698');
+
+		var init = { method: 'POST',
+		               headers: headers,
+		               mode: 'cors',
+		               body: 'email=ian.haizlip%40gmail.com&password=danmit5698'
+		                };
+
+		fetch('https://quiniwine.com/signin', init).then(function(response) {
+		  return response.json();
+		}).then(function(json) {
+		  console.log(json)	
+		  key = json.token;	
+		});
+
+		let wineFind = 'Heitz';
+
+		let wineSearch = spaceReplace(wineFind);
+		console.log(wineSearch);
+
+		let queryURL = `https://quiniwine.com/api/pub/wineKeywordSearch/${wineSearch}/0/3`;
+
+		let headerGet = new Headers();
+		headerGet.append('Accept', 'application/json');
+		headerGet.append('Authorization', `Bearer ${key}`);
+
+		$.ajax({
+    	  url: queryURL,
+    	  method: 'GET',
+    	  header: headerGet
+    	}).done(function(data) {
+    	  console.log(data);
+    	});	
+
+
+		});
+
+
+		function spaceReplace(wineInput){
+			return wineInput.split(' ').join('%20');
+		};
+
+	</script>
+</body>
+</html>
