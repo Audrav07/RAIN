@@ -55,10 +55,10 @@
 and your password to join.
         </p>
         <input class="w100" type="email" placeholder=" Email" id="user-email" reqired autocomplete='off' />
-        <input type="user-name" placeholder=" Username" reqired />
+        <input type="user-name" placeholder=" Username" id="user-name" reqired />
         <input type="password" placeholder=" Password" id="userPassword" reqired />
         <button class="form-btn sx log-in" id="login" type="button" >Log In</button>
-        <button class="form-btn dx" id="signUpBtn" type="submit" >Sign Up</button>
+        <button class="form-btn dx" id="signUpBtn" type="submit" data-dismiss="modal">Sign Up</button>
     </form>
     <form class="signIn" id="mySignInForm">
         <h3>Welcome</br>Back!</h3>
@@ -94,14 +94,14 @@ and your password to join.
         <input class="w100" type="email" placeholder="Email" id="user-email" reqired autocomplete='off' />
         <input type="username" placeholder="Username" id="user-name" reqired />
         <input type="password" placeholder="Password" id="userPassword" reqired />
-     <button class="form-btn dxxx" id="signUpBtn-2" type="submit">Sign Up</button>
+     <button class="form-btn dxxx" id="signUpBtn-2" type="submit" data-dismiss="modal">Sign Up</button>
     </form>
 </div>
 </div>
 </div>
 
 
-<!-- sign in form -->
+<!-- sign in form navbar-->
 
 <div id="modalsignInForm" class="modal fade">
     <div class="modal-dialog" role="document">
@@ -115,7 +115,7 @@ and your password to join.
         <input type="email" class="inputEmail" placeholder=" Email/Username" autocomplete='off' id="user-email" reqired />
         <input type="password" class="inputPassword" placeholder=" Password" id="currentPassword" reqired />
         
-        <button class="form-btn dxx" id="signInBtn-2" type="submit">Log In</button>
+        <button class="form-btn dxx" id="signInBtn-2" type="submit" data-dismiss="modal">Log In</button>
 
     </form>
      </div>
@@ -136,16 +136,27 @@ and your password to join.
     <div id="mainPage">
         <div class="jumbotron">
             <h1>Browse Wines</h1>
-            <form class="search-form">
+            <div class="search-form">
                 <div class="input-group">
                     <div class="input-group-addon"><span><i class="fa fa-search"></i></span></div>
                     <input class="form-control" type="text" placeholder="I am looking for..">
                     <div class="input-group-btn"><button class="btn btn-light" type="button">Search </button></div>
                 </div>
-            </form>
+            </div>
             <p></p>
         </div>
     </div>
+
+
+
+ <!-- <div class="quickstart-user-details-container">
+            Firebase sign-in status: <span id="quickstart-sign-in-status">Unknown</span>
+            <div>Firebase auth <code>currentUser</code> object value:</div>
+            <pre><code id="quickstart-account-details">null</code></pre>
+          </div>
+        </div>
+      </div>
+ -->
 
     <!-- footer -->
     <footer>
@@ -175,7 +186,7 @@ and your password to join.
         <a href="https://www.freepik.com/free-photos-vectors/icon">Icon vector created by Vectorpocket - Freepik.com</a> -->
     </footer>
 
-<!-- jroewjrowej -->
+
 <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
     <script src="assets/js/jquery.min.js"></script>
      <script src="./assets/javascript/app.js"></script>
