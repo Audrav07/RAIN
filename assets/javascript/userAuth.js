@@ -135,7 +135,7 @@ var userLogin = function(event) {
         }
     }
 
-    //jdiosjriowejrow
+  
 
     firebase.auth().signInWithEmailAndPassword(userEmail, password).then(function(user){
       userId = user.uid;
@@ -156,6 +156,7 @@ var userLogin = function(event) {
 
 
     //reset form
+    // $("#user-email").val("");
     $("#user-name").val("");
     $("#currentPassword").val("");
 };
@@ -173,7 +174,7 @@ var initApp = function() {
             var uid = user.uid;
             var providerData = user.providerData;
             // ...
-            document.getElementById("")
+            // document.getElementById("")
             console.log('signed in');
             $("#mySignInForm").hide();
             $("#mySignUpForm").hide();
@@ -184,6 +185,9 @@ var initApp = function() {
             $("#signUpBtn").hide();
             $("#signInBtn-2").hide();
             $("#signUpBtn-2").hide();
+            // $("#signIn").hide()
+            // $("#signUp").hide();
+            // $("#signInModal").hide();
             $("#signOut").show();
 
 
@@ -191,14 +195,14 @@ var initApp = function() {
             //if user is signed out
             console.log('user is signed out');
             $("#signOut").hide();
-            $("#backBtn").hide();
+            $("#backBtn").show();
             $("#signInBtn").show();
             $("#signUpBtn").show();
 
         }
 
 
-        //signed in on navbar
+     
 
     });
 
@@ -256,6 +260,8 @@ var initApp = function() {
             console.log("User is signed out!");
             $("#mySignUpForm-2").show();
             $("#mySignInForm-2").show();
+            $("#signIn").show();
+            $("#signUp").show();
             $("#signOut").hide();
         }, function(error) {
             console.error("sign out error: " + error);
@@ -265,55 +271,83 @@ var initApp = function() {
 
 //sign in button navbar
 
-// $("#signInBtn-2").on("click", function(event) {
-//     event.preventDefault;
-//     console.log("login clicked!");
-//     $('#mySignUpForm').hide();
-//     $("#signIn").hide();
-//     $("#signUpBtn").hide();
-//     $('#mySignInForm-2').show();
+$("#signInBtn-2").on("click", function(event) {
+    event.preventDefault();
+    
+    console.log("login clicked!");
+    $('#mySignUpForm').hide();
+    $("#signIn").hide();
+    $("#signUpBtn").hide();
+    $("#signUpBtn-2").hide();
 
-// });
+    $('#mySignInForm-2').show();
+
+});
 
 
-// $("#signUpBtn-2").on("click", function() {
-//     console.log("signup clicked!");
-//     $('#mySignInForm-2').hide();
-//     $('#signInBtn-2').hide();
-//     // $("#signUpBtn").hide();
+$("#signUpBtn-2").on("click", function() {
+    userSignUp();
 
-//     $('#mySignUpForm-2').show();
-// });
+    console.log("signup clicked!");
+    $('#mySignInForm-2').hide();
+    $('#signInBtn-2').hide();
+    $('#signUp').hide();
+    $('#signIn').hide();
+    $('#signOut').show();
+    $("#signUpBtn").hide();
+    $("#signUpBtn-2").show();
+    $('#mySignUpForm-2').show();
+});
 
 
 
 
 //sign in navbar
-// initApp ();
-//      if(user){
+initApp ();
+     // if(user){
 
-//      email =user.email;
-//        console.log('signed in');
-//        $("#mySignInForm-2").hide();
-//        $("#mySignUpForm-2").hide();
-//        $("#create-form").hide();
-//        $("#signUpBtn-2").hide();
-//        $("#signInBtn-2").hide();
-//        //create signed in button
-//      }
-//    };
+     // email = user.email;
+     //   console.log('signed in');
+     //   $("#mySignInForm-2").hide();
+     //   $("#mySignUpForm-2").hide();
+     //   $("#create-form").hide();
+     //   $("#signUpBtn-2").hide();
+     //   $("#signInBtn-2").hide();
+       //create signed in button
+     // };
+   
 
 //sign in/sign up button navbar
 
+
+  $("#mySignInForm-2").on("keypress", function(event) {
+        event.preventDefault();
+        if (event.which == 13) {
+            console.log("Enter on form!");
+            userLogin(event);
+        }
+    });
+
+
+   $("#mySignUpForm-2").on("keypress", function(event) {
+
+        if (event.which == 13) {
+            event.preventDefault();
+            console.log("enter");
+            userSignUp(event);
+        }
+    });
+
 //     $("#signInBtn-2").on("click", function(event) {
-//     event.preventDefault;
+//     event.preventDefault();
+//     userLogin();
 //     console.log("login clicked!");
 //     $('#mySignUpForm-2').hide();
 //     $('#modalsignUpForm').hide();
-//     // $("#signIn").hide();
-//     // $("#signUpBtn").hide()
-//     $("#signUpBtn-2").hide();
-//     $('#signInForm-2').show();
+//     $("#signIn").hide();
+//     $("#signUp").hide()
+//     $("#mySignUpBtn-2").hide();
+//     $('#mySignInForm-2').show();
 //     $("#signOut").show();
 
 // });
@@ -325,7 +359,11 @@ var initApp = function() {
 //     $("#mySignInForm-2").hide();
 //     $("#modalsignInForm").hide();
 //     $("#signInBtn-2").hide();
-//     $('#mySignUpForm-2').show();
+//      $('#mySignUpForm-2').hide();
+//      $('#signUpBtn-2').hide();
+ 
+//     $("#signOut").show();
+   
 // });
 
 

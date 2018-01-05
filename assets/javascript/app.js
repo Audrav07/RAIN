@@ -1,6 +1,5 @@
 
 
-//sdrewrewrw
 
 //========================== signup/signin form ========================//
 
@@ -8,7 +7,11 @@ $(window).on('load', function(){
  // initApp();
 
 
+
 $("#signInModal").modal("show");
+
+
+
 
 $(".log-in").click(function(){
     $(".signIn").addClass("active-dx");
@@ -50,3 +53,25 @@ document.getElementById('abc').style.display = "none";
 
 });
 //======================= end form ==================================//
+
+//======================= card popup ===============================//
+
+$("#searchButton").on("click", function(){
+	console.log('clicked');
+	// $('.card-block').fadeIn('slow');
+
+	$('.cardcontainer, fa fa-window-close').toggleClass('active');
+  	$('.search-form').hide();
+
+
+});
+
+$('.fa').on('click', function(){
+	console.log('click');
+		$('.cardcontainer').toggleClass('active');
+		$('.search-form').show();
+	})
+
+//======================= end card ===============================//
+
+
