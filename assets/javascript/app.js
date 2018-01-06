@@ -129,6 +129,27 @@ $('.fa').on('click', function(){
               console.log(data.items[0].Varietal);
               if (grape === 'Zinfandel') {
                 console.log('zin');
+                let print = `
+                    <img class="card-img-top img-responsive" src="assets/images/albarino.jpg" id="photoA" alt="albarino">
+                    <div class="card-block">
+                        <h4 class="card-title">Winery: ${data.items[0].Winery}</h4>
+                        <h4 class="card-title">Wine: ${data.items[0].Name}</h4>
+                        <h4 class="card-title">Label 3</h4>
+                        <h4 class="card-title">Label 4</h4>
+                        <h4 class="card-title">Label 5</h4>
+                        <h6 class="text-muted">Another Label</h6>
+                        <p class="card-text">
+                            Praesent ac nisi nec lorem facilisis laoreet. Duis elit quam, blandit id euismod ut, sodales vel magna. Donec gravida enim euismod posuere interdum. Praesent sodales eget diam vitae blandit. Sed condimentum molestie erat eu tincidunt. Quisque bibendum ullamcorper finibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin ut aliquet nibh. Fusce scelerisque a lorem ut ultrices. Proin convallis metus ac ante condimentum, ut congue justo mattis. Quisque ultrices id mauris vitae dignissim. Pellentesque vel orci velit. Mauris eget hendrerit ex, eget volutpat eros. Pellentesque in nisi turpis. Maecenas tempor nisi vitae odio mattis, ac volutpat nunc mattis. Integer lectus dui, vehicula nec fermentum vel, tincidunt non massa.
+                        </p>
+
+                        <p>
+
+                            map goes here
+                            <img class="google" src="assets/images/SFmap.png" id="map" alt="googlemap">
+                        </p>
+                        
+                    </div>
+                `;
               };
               if (grape === 'Cabernet Sauvignon') {
                 console.log('cab');
