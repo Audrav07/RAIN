@@ -174,7 +174,7 @@ var initApp = function() {
             var uid = user.uid;
             var providerData = user.providerData;
             // ...
-            // document.getElementById("")
+            document.getElementById("")
             console.log('signed in');
             $("#mySignInForm").hide();
             $("#mySignUpForm").hide();
@@ -185,8 +185,8 @@ var initApp = function() {
             $("#signUpBtn").hide();
             $("#signInBtn-2").hide();
             $("#signUpBtn-2").hide();
-            // $("#signIn").hide()
-            // $("#signUp").hide();
+            $("#signIn").hide()
+            $("#signUp").hide();
             // $("#signInModal").hide();
             $("#signOut").show();
 
@@ -237,6 +237,14 @@ var initApp = function() {
         event.preventDefault();
         console.log("entered on form");
         userLogin(event);
+        $('#mySignUpForm').hide();
+        $("#signIn").hide();
+        $("#signUp").hide();
+        $("#signUpBtn").hide();
+        $("#signUpBtn-2").hide();
+        $("#mySignUpForm-2").hide();
+        $('#mySignInForm-2').show();
+        $("#signOut").show();
 
     });
 
@@ -244,8 +252,9 @@ var initApp = function() {
 
     //enter key on login on load
     $("#mySignInForm").on("keypress", function(event) {
-        event.preventDefault();
+        // event.preventDefault();
         if (event.which == 13) {
+            event.preventDefault();
             console.log("Enter on form!");
             userLogin(event);
         }
@@ -277,33 +286,42 @@ $("#signInBtn-2").on("click", function(event) {
     console.log("login clicked!");
     $('#mySignUpForm').hide();
     $("#signIn").hide();
+    $("#signUp").hide();
     $("#signUpBtn").hide();
     $("#signUpBtn-2").hide();
-
+    $("#mySignUpForm-2").hide();
     $('#mySignInForm-2').show();
+    $("#signOut").show();
 
 });
 
+  $("#mySignInForm-2").on("keypress", function(event) {
+        if (event.which == 13) {
+            event.preventDefault();
+            console.log("Enter on form!");
+            userLogin(event);
+        }
+    });
 
-$("#signUpBtn-2").on("click", function() {
-    userSignUp();
+// $("#signUpBtn-2").on("click", function() {
+//     userSignUp();
 
-    console.log("signup clicked!");
-    $('#mySignInForm-2').hide();
-    $('#signInBtn-2').hide();
-    $('#signUp').hide();
-    $('#signIn').hide();
-    $('#signOut').show();
-    $("#signUpBtn").hide();
-    $("#signUpBtn-2").show();
-    $('#mySignUpForm-2').show();
-});
+//     console.log("signup clicked!");
+//     $('#mySignInForm-2').hide();
+//     $('#signInBtn-2').hide();
+//     $('#signUp').hide();
+//     $('#signIn').hide();
+//     $('#signOut').show();
+//     $("#signUpBtn").hide();
+//     $("#signUpBtn-2").show();
+//     $('#mySignUpForm-2').show();
+// });
 
 
 
 
 //sign in navbar
-initApp ();
+// initApp ();
      // if(user){
 
      // email = user.email;
@@ -320,23 +338,23 @@ initApp ();
 //sign in/sign up button navbar
 
 
-  $("#mySignInForm-2").on("keypress", function(event) {
-        event.preventDefault();
-        if (event.which == 13) {
-            console.log("Enter on form!");
-            userLogin(event);
-        }
-    });
+  // $("#mySignInForm-2").on("keypress", function(event) {
+  //       event.preventDefault();
+  //       if (event.which == 13) {
+  //           console.log("Enter on form!");
+  //           userLogin(event);
+  //       }
+  //   });
 
 
-   $("#mySignUpForm-2").on("keypress", function(event) {
+  //  $("#mySignUpForm-2").on("keypress", function(event) {
 
-        if (event.which == 13) {
-            event.preventDefault();
-            console.log("enter");
-            userSignUp(event);
-        }
-    });
+  //       if (event.which == 13) {
+  //           event.preventDefault();
+  //           console.log("enter");
+  //           userSignUp(event);
+  //       }
+  //   });
 
 //     $("#signInBtn-2").on("click", function(event) {
 //     event.preventDefault();
@@ -370,3 +388,4 @@ initApp ();
 window.onload = function() {
     initApp();
 };
+
