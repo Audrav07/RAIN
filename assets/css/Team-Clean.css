@@ -82,3 +82,20 @@
   opacity:1;
 }
 
+
+
+.rounded-circle{
+ height: 250px;
+ width: 300px;
+}
+
+
+.col-md-6.col-lg-4.item {
+  margin-left:100px;
+}
+
+.container {
+  background-color:#0;
+}
+
+

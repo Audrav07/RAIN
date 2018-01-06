@@ -10,6 +10,8 @@ $(window).on('load', function(){
 
 $("#signInModal").modal("show");
 
+$(".team-clean").hide();
+// $("#home").hide();
 
 
 
@@ -73,5 +75,56 @@ $('.fa').on('click', function(){
 	})
 
 //======================= end card ===============================//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//======================== about page ===============================//
+
+
+$("#about").on("click", function(){
+    console.log("clicked about")
+    $(".team-clean").show();
+    $("#mainPage").hide();
+})
+
+
+$("#home").on("click", function(){
+    console.log("clicked")
+    $(".team-clean").hide();
+    $("#mainPage").show();
+})
+
+
+
+
+
+//========================about======================//
+
+
+//==========================img for search bar=====================//
+
+
+ // var grapeImage = $('<img>');
+ //            grapeImage.attr('src', response.results[j].image);
+ //            grapeImage.addClass('grapeImage');
+ //            grapeImage.addClass('img-responsive');
+ //            grapeImage.attr('data-Id', response.results[j].id);
+ //            grapeImage.attr('data-sourceUrl', response.results[j].sourceUrl);
+
+
+
+
+
 
 

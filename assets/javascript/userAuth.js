@@ -187,7 +187,7 @@ var initApp = function() {
             $("#signUpBtn-2").hide();
             $("#signIn").hide()
             $("#signUp").hide();
-            // $("#signInModal").hide();
+            $("#signInModal").hide();
             $("#signOut").show();
 
 
