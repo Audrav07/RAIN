@@ -12,49 +12,112 @@
 	<script type="text/javascript">
 		$(document).ready(function () { 
 
-		let key = new String();
 
-		let headers = new Headers();
-		headers.append('Accept', 'application/json');
-		headers.append('Content-Type', 'application/x-www-form-urlencoded;charset=UTF-8');
+		function wineSearch (value) {
 
-		let data = new FormData();
-		data.append('email','ian.haizlip@gmail.com');
-		data.append('password','danmit5698');
-
-		var init = { method: 'POST',
-		               headers: headers,
-		               mode: 'cors',
-		               body: 'email=ian.haizlip%40gmail.com&password=danmit5698'
-		                };
-
-		fetch('https://quiniwine.com/signin', init).then(function(response) {
-		  return response.json();
-		}).then(function(json) {
-		  console.log(json)	
-		  key = json.token;	
-		});
-
-		let wineFind = 'Heitz Zinfandel';
-
-		let wineSearch = spaceReplace(wineFind);
-		console.log(wineSearch);
-
-		let queryURL = `https://quiniwine.com/api/pub/wineKeywordSearch/${wineSearch}/0/3`;
-
-		let headerGet = new Headers();
-		headerGet.append('Accept', 'application/json');
-		headerGet.append('Authorization', `Bearer ${key}`);
-
-		$.ajax({
-    	  url: queryURL,
-    	  method: 'GET',
-    	  header: headerGet
-    	}).done(function(data) {
-    	  console.log(data);
-    	});	
+			let key = new String();
 
 
+			//get access to the wine API
+			let headers = new Headers();
+			headers.append('Accept', 'application/json');
+			headers.append('Content-Type', 'application/x-www-form-urlencoded;charset=UTF-8');
+
+			let data = new FormData();
+			data.append('email','ian.haizlip@gmail.com');
+			data.append('password','danmit5698');
+
+			var init = { method: 'POST',
+			               headers: headers,
+			               mode: 'cors',
+			               body: 'email=ian.haizlip%40gmail.com&password=danmit5698'
+			                };
+
+			fetch('https://quiniwine.com/signin', init).then(function(response) {
+			  return response.json();
+			}).then(function(json) {
+			  console.log(json)	
+			  key = json.token;	
+			});
+
+			//Wine to Search for
+			let wineFind = 'Duckhorn Three Palms Merlot';
+
+			let wineSearch = spaceReplace(wineFind);
+			console.log(wineSearch);
+
+			let queryURL = `https://quiniwine.com/api/pub/wineKeywordSearch/${wineSearch}/0/1`;
+
+			let headerGet = new Headers();
+			headerGet.append('Accept', 'application/json');
+			headerGet.append('Authorization', `Bearer ${key}`);
+
+
+			//get and use responce form wine API
+			$.ajax({
+	    	  url: queryURL,
+	    	  method: 'GET',
+	    	  header: headerGet
+	    	}).done(function(data) {
+	    	  console.log(data);
+	    	  let grape = data.items[0].Varietal;
+	    	  console.log(data.items[0].Varietal);
+	    	  if (grape === 'Zinfandel') {
+	    	  	console.log('zin');
+	    	  };
+	    	  if (grape === 'Cabernet Sauvignon') {
+	    	  	console.log('cab');
+	    	  };
+	    	  if (grape === 'Pinot Noir') {
+	    	  	console.log('pinot');
+	    	  };
+	    	  if (grape === 'Sauvignon Blanc') {
+	    	  	console.log('sauv blanc');
+	    	  };
+	    	  if (grape === 'Chardonnay') {
+	    	  	console.log('chard');
+	    	  };
+	    	  if (grape === 'Riesling') {
+	    	  	console.log('reiz');
+	    	  };
+	    	  if (grape === 'Gewürztraminer') {
+	    	  	console.log('gewurzt');
+	    	  };
+	    	  if (grape === 'Malbec') {
+	    	  	console.log('malbec');
+	    	  };
+	    	  if (grape === 'Syrah' || grape === 'Shiraz') {
+	    	  	console.log('syrah/shiraz');
+	    	  };
+	    	  if (grape === 'Tempranillo') {
+	    	  	console.log('temp');
+	    	  };
+	    	  if (grape === 'Albarino') {
+	    	  	console.log('ablba');
+	    	  };
+	    	  if (grape === 'Nebbiolo') {
+	    	  	console.log('neb');
+	    	  };
+	    	  if (grape === 'Pinot Grigio' || grape === 'Pinot Gris') {
+	    	  	console.log('pinot gri');
+	    	  };
+	    	  if (grape === 'Barbera') {
+	    	  	console.log('barb');
+	    	  };
+	    	  if (grape === 'Sangiovese') {
+	    	  	console.log('sangio');
+	    	  };
+	    	  if (grape === 'Merlot') {
+	    	  	console.log('no more');
+	    	  };
+
+
+	    	});	
+
+	    };
+
+
+	    
 		});
 
 
