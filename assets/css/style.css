@@ -2,7 +2,7 @@ body {
 }
 
 #mainPage {
-  background:url(../../assets/img/wine.jpeg) no-repeat;
+  background:url(../../assets/images/wine.jpeg) no-repeat;
   background-size:cover;
   height:600px;
   /*height:100%;*/
@@ -62,7 +62,8 @@ footer {
 
 .footer-navigation h3 {
   margin:0;
-  font:normal 36px Cookie, cursive;
+  font-family: 'Dosis';
+ /* font:normal 36px Cookie, cursive;*/
   margin-bottom:20px;
   color:#fff;
 }
@@ -187,6 +188,7 @@ div.social-links {
 .navigation-clean .navbar-brand {
   font-weight:bold;
   color:#853060;
+  font-size:40px;
 }
 
 .navigation-clean .navbar-brand:hover {
@@ -251,6 +253,7 @@ div.social-links {
 
 
 .search-form {
+  position: relative;
   margin:40px 5px;
   font:normal 12px sans-serif;
   box-shadow:1px 2px 4px 0 rgba(0, 0, 0, 0.08);
@@ -293,9 +296,17 @@ div.social-links {
 
 .search-form div.input-group-btn button:focus:active {
   background-color:#6caee0;
+
   color:#ffffff;
   outline:none;
 }
+
+#searchButton{
+  background-color: #8f8023;
+  color:#ffffff;
+  outline:none;
+}
+
 
 .list-inline {
   text-align:center;
@@ -372,26 +383,7 @@ button{
     outline: none !important; 
 }
 
-/*button.fb {
-    border: none;
-    background: #3b5998;
-    width: 160px;
-    height: 25px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 12px;
-    color: #fff;
-    text-transform: uppercase;
-    border-radius: 4px;
-    border: 1px solid #29487d;
-    cursor: pointer;
-    margin-bottom: 20px;
-    transition:all 0.3s linear;
-}
-button.fb:hover {
-    background: #fff;
-    color: #3b5998;
-}
-*/
+
 button.form-btn {
     position: absolute;
     width: 50%;
@@ -474,6 +466,8 @@ input {
     width: 100%;
 }
 
+
+/*translate3d=reposition 3d element*/
 .signIn{
         z-index: 1;
         transform: perspective(100px) translate3d(100px, 0px, -30px);
@@ -487,25 +481,25 @@ input {
 
 .active-dx{
     animation-name: foregrounding-dx;
-    animation-duration: 0.9s;
+    animation-duration: 0.8s;
     animation-fill-mode: forwards;
 }
 
 .active-sx{
     animation-name: foregrounding-sx;
-    animation-duration: 0.9s;
+    animation-duration: 0.8s;
     animation-fill-mode: forwards;
 }
 
 .inactive-dx{
     animation-name: overshadowing-dx;
-    animation-duration: 0.9s;
+    animation-duration: 0.8s;
     animation-fill-mode: forwards;
 }
 
 .inactive-sx{
     animation-name: overshadowing-sx;
-    animation-duration: 0.9s;
+    animation-duration: 0.8s;
     animation-fill-mode: forwards;
 }
 
@@ -576,7 +570,7 @@ input {
 
 .welcome{
 font-family: 'Dosis';
-    font-size: 25px;
+    font-size: 35px;
     text-transform: uppercase;
     color: #3b3b3b;
     margin-bottom: 30px;
@@ -631,28 +625,10 @@ margin-left: 70px;
     color: #fff;
 }
 
-button.fb {
-    border: none;
-    background: #3b5998;
-    width: 278px;
-    height: 37px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 15px;
-    color: #fff;
-    text-transform: uppercase;
-    border-radius: 4px;
-    border: 1px solid #29487d;
-    cursor: pointer;
-    margin-bottom: 20px;
-    transition:all 0.3s linear;
-}
-button.fb:hover {
-    background: #fff;
-    color: #3b5998;
-}
 
  #signInBtn-2 {
     position: absolute;
+ 
     width: 50%;
     height: 60px;
     bottom: 0;
@@ -661,6 +637,9 @@ button.fb:hover {
     font-size: 24px;
     text-transform: uppercase;
     cursor: pointer;
+  font-size: 20px;
+      height: 40px;
+    width:240px;
 }
 
 button.form-btn.sx {
@@ -686,12 +665,16 @@ button.form-btn.sx.back:hover {
 }
 
 button.form-btn.dxx {
-  left:90px;
-  top:450px;
+  left:35px;
+  top:400px;
    /* right: 0;*/
     border-radius: 0 0 5px 0;
     background-color: #552329;
     color: #fff;
+
+  /*     margin-left: -80px;
+    margin-bottom: 40px;*/
+
 }
 
 
@@ -703,7 +686,7 @@ button.form-btn.dxx {
     font-family: 'Roboto';
     color: #3b3b3b;
     text-align: center;
-    font-size: 21px;
+    font-size: 20px;
     font-weight:100;
     margin-bottom:25px;
 }
@@ -715,12 +698,12 @@ button.form-btn.dxx {
     font-family: 'Roboto';
     color: #3b3b3b;
     text-align: center;
-    font-size: 21px;
+    font-size: 20px;
     font-weight:100;
     margin-bottom:25px;
 }
 
-.or{
+/*.or{
   font-family: 'Roboto', sans-serif;
     font-weight: 100;
     text-transform: uppercase;
@@ -728,18 +711,35 @@ button.form-btn.dxx {
     color: #3b3b3b;
     margin-bottom: 40px;
 }
-
+*/
 button.form-btn.dxxx {
-  left:81px;
-  top:390px;
+  font-size: 20px;
+  left:35px;
+  top:400px;
    /* right: 0;*/
     border-radius: 0 0 5px 0;
     background-color: #552329;
     color: #fff;
+    height: 40px;
+    width:240px;
 }
 
 #mySignUpForm-2{
-position: absolute;
+
+
+ position: absolute;
+    text-align: center;
+    background: #fff;
+    width: 310px;
+    height: 470px;
+    border-radius: 5px;
+    padding: 30px 20px 0 20px;
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+    margin-left: 70px;
+    top:80px;
+
+/*position: absolute;
     text-align: center;
     background: #fff;
     width: 410px;
@@ -749,14 +749,28 @@ position: absolute;
     box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.25);
     box-sizing: border-box;
 margin-left: -37px;
-
+font-size: 45px;
     z-index: 1;
-        transform: perspective(100px) translate3d(100px, 0px, -30px);
+        transform: perspective(100px) translate3d(100px, 0px, -30px);*/
 
 }
 
 #mySignInForm-2{
-  position: absolute;
+
+
+ position: absolute;
+    text-align: center;
+    background: #fff;
+    width: 310px;
+    height: 470px;
+    border-radius: 5px;
+    padding: 30px 20px 0 20px;
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+    margin-left: 70px;
+    top:80px;
+        
+  /*position: absolute;
     text-align: center;
     background: #fff;
     width: 410px;
@@ -770,7 +784,193 @@ margin-left: -37px;
     z-index: 1;
         transform: perspective(100px) translate3d(100px, 0px, -30px);
         
-        
+  */
 
+}
+
+
+
+
+/*card popup
+*/
+
+
+/*
+body {
+  background: #ddd;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}*/
+
+
+
+h2 {
+  color: #007fed;
+  font-weight: bold;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+p {
+  color: #001818;
+ 
+}
+
+
+.card animated fadeIn{
+
+
+}
+
+
+.cardcontainer {
+  height: 100%;
+  position: absolute;
+
+  overflow: hidden;
+  top: 10%;
+  right: 10%;
+  bottom: 85px;
+  left: 10%;
+  padding: 20px 50px;
+  display: block;
+  border-radius: 4px;
+  transform: translateY(20px);
+  transition: all 0.5s;
+  visibility: hidden;
+
+  
+}
+.cardcontainer .card  {
+  opacity: 0;
+
+
+}
+.cardcontainer:before {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background: white;
+  content: "";
+  bottom: 10px;
+  left: 50%;
+  top: 95%;
+  color: #fff;
+/*  border-radius: 50%;*/
+-webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  
+  transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+
+   
+}
+.cardcontainer.active {
+
+  position:absolute;
+  display: block;
+  visibility: visible;
+  box-shadow: 2px 3px 16px silver;
+  transition: all 600ms;
+  transform: translateY(0px);
+  transition: all 0.5s;
+
+ 
+overflow-y:scroll;
+   
+}
+.cardcontainer.active:before {
+  height: 2000px;
+  width: 2000px;
+/*  border-radius: 50%;*/
+  top: 50%;
+  left: 50%;
+  margin-left: -1000px;
+  margin-top: -1000px;
+  display: block;
+  -webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+
+   
+}
+.cardcontainer.active .card {
+  position: relative;
+  z-index: 1;
+  opacity: 1;
+  transition: all 600ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+
+
+   
+}
+
+a.button {
+  padding: 11px 11px 13px 13px;
+  outline: none;
+  border-radius: 50%;
+/*  background: #007fed;*/
+background:#000000;
+  color: #fff;
+  font-size: 24px;
+  display: block;
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  top: auto;
+  margin-left: -25px;
+  transition: transform 0.25s;
+}
+a.button:hover {
+  text-decoration: none;
+  background: #2198ff;
+}
+a.button.active {
+  transform: rotate(135deg);
+  transition: transform 0.5s;
+}
+
+#photoA{
+
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.fa-window-close{
+/*  background-color: #ffffff;*/
+  /*margin-right: 40px;*/
+  color:#8f8023;
+}
+
+h4.card-title{
+  color:#3b3b3b;
+}
+
+p.card-text{
+  color:#3b3b3b;
+}
+
+.card-block{
+
+  max-height: 100%;
+}
+
+#map{
+  height:400px;
+  width: 500px;
+}
+
+
+
+
+
+
+
+
+
+.col-md-6.col-lg-4.item {
+  margin-left:100px;
+}
+
+.container {
+  background-color:#0;
 }
 
