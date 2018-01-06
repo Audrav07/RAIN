@@ -2,7 +2,7 @@ body {
 }
 
 #mainPage {
-  background:url(../../assets/img/wine.jpeg) no-repeat;
+  background:url(../../assets/images/wine.jpeg) no-repeat;
   background-size:cover;
   height:600px;
   /*height:100%;*/
@@ -956,5 +956,21 @@ p.card-text{
 #map{
   height:400px;
   width: 500px;
+}
+
+
+
+
+
+
+
+
+
+.col-md-6.col-lg-4.item {
+  margin-left:100px;
+}
+
+.container {
+  background-color:#0;
 }
 
