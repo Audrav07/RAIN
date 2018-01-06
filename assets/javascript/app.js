@@ -131,7 +131,7 @@ $('.fa').on('click', function(){
                 console.log('zin');
                 let print = `
                     <h4>${data.items[0].Varietal}</h4>
-                    <img class="card-img-top img-responsive" src="assets/images/zin.jpg" id="photoA" alt="albarino">
+                    <img class="card-img-top img-responsive" src="assets/images/zin.jpg" id="photoA" alt="Zinfandel">
                     <div class="card-block">
                         <h4 class="card-title">Winery: ${data.items[0].Winery}</h4>
                         <h4 class="card-title">Wine: ${data.items[0].Name}</h4>
@@ -158,7 +158,7 @@ $('.fa').on('click', function(){
                 console.log('cab');
                 let print = `
                     <h4>${data.items[0].Varietal}</h4>
-                    <img class="card-img-top img-responsive" src="assets/images/cab-sauv.jpg" id="photoA" alt="albarino">
+                    <img class="card-img-top img-responsive" src="assets/images/cab-sauv.jpg" id="photoA" alt="Cabernet Sauvignon">
                     <div class="card-block">
                         <h4 class="card-title">Winery: ${data.items[0].Winery}</h4>
                         <h4 class="card-title">Wine: ${data.items[0].Name}</h4>
@@ -185,7 +185,7 @@ $('.fa').on('click', function(){
                 console.log('pinot');
                 let print = `
                     <h4>${data.items[0].Varietal}</h4>
-                    <img class="card-img-top img-responsive" src="assets/images/pinot-noir.jpg" id="photoA" alt="albarino">
+                    <img class="card-img-top img-responsive" src="assets/images/pinot-noir.jpg" id="photoA" alt="Pinot Noir">
                     <div class="card-block">
                         <h4 class="card-title">Winery: ${data.items[0].Winery}</h4>
                         <h4 class="card-title">Wine: ${data.items[0].Name}</h4>
@@ -212,7 +212,7 @@ $('.fa').on('click', function(){
                 console.log('sauv blanc');
                 let print = `
                     <h4>${data.items[0].Varietal}</h4>
-                    <img class="card-img-top img-responsive" src="assets/images/sauv-blanc.jpg" id="photoA" alt="albarino">
+                    <img class="card-img-top img-responsive" src="assets/images/sauv-blanc.jpg" id="photoA" alt="Sauvignon Blanc">
                     <div class="card-block">
                         <h4 class="card-title">Winery: ${data.items[0].Winery}</h4>
                         <h4 class="card-title">Wine: ${data.items[0].Name}</h4>
@@ -240,7 +240,7 @@ $('.fa').on('click', function(){
                 console.log('chard');
                 let print = `
                     <h4>${data.items[0].Varietal}</h4>
-                    <img class="card-img-top img-responsive" src="assets/images/chard.jpg" id="photoA" alt="albarino">
+                    <img class="card-img-top img-responsive" src="assets/images/chard.jpg" id="photoA" alt="Chardonnay">
                     <div class="card-block">
                         <h4 class="card-title">Winery: ${data.items[0].Winery}</h4>
                         <h4 class="card-title">Wine: ${data.items[0].Name}</h4>
@@ -269,7 +269,7 @@ $('.fa').on('click', function(){
                 console.log('riesling');
                 let print = `
                     <h4>${data.items[0].Varietal}</h4>
-                    <img class="card-img-top img-responsive" src="assets/images/riesling.jpg" id="photoA" alt="albarino">
+                    <img class="card-img-top img-responsive" src="assets/images/riesling.jpg" id="photoA" alt="Riesling">
                     <div class="card-block">
                         <h4 class="card-title">Winery: ${data.items[0].Winery}</h4>
                         <h4 class="card-title">Wine: ${data.items[0].Name}</h4>
@@ -295,7 +295,7 @@ $('.fa').on('click', function(){
                 console.log('gewurzt');
                 let print = `
                     <h4>${data.items[0].Varietal}</h4>
-                    <img class="card-img-top img-responsive" src="assets/images/gewurzt.jpg" id="photoA" alt="albarino">
+                    <img class="card-img-top img-responsive" src="assets/images/gewurzt.jpg" id="photoA" alt="Gewürztraminer">
                     <div class="card-block">
                         <h4 class="card-title">Winery: ${data.items[0].Winery}</h4>
                         <h4 class="card-title">Wine: ${data.items[0].Name}</h4>
@@ -321,7 +321,7 @@ $('.fa').on('click', function(){
                 console.log('malbec');
                 let print = `
                     <h4>${data.items[0].Varietal}</h4>
-                    <img class="card-img-top img-responsive" src="assets/images/malbec.jpg" id="photoA" alt="albarino">
+                    <img class="card-img-top img-responsive" src="assets/images/malbec.jpg" id="photoA" alt="Malbec">
                     <div class="card-block">
                         <h4 class="card-title">Winery: ${data.items[0].Winery}</h4>
                         <h4 class="card-title">Wine: ${data.items[0].Name}</h4>
@@ -348,7 +348,7 @@ $('.fa').on('click', function(){
                 console.log('syrah/shiraz');
                 let print = `
                     <h4>${data.items[0].Varietal}</h4>
-                    <img class="card-img-top img-responsive" src="assets/images/syrah.jpg" id="photoA" alt="albarino">
+                    <img class="card-img-top img-responsive" src="assets/images/syrah.jpg" id="photoA" alt="Syrah/Shiraz">
                     <div class="card-block">
                         <h4 class="card-title">Winery: ${data.items[0].Winery}</h4>
                         <h4 class="card-title">Wine: ${data.items[0].Name}</h4>
@@ -376,7 +376,7 @@ $('.fa').on('click', function(){
                 console.log('temp');
                 let print = `
                     <h4>${data.items[0].Varietal}</h4>
-                    <img class="card-img-top img-responsive" src="assets/images/tempranillo.jpg" id="photoA" alt="albarino">
+                    <img class="card-img-top img-responsive" src="assets/images/tempranillo.jpg" id="photoA" alt="Tempranillo">
                     <div class="card-block">
                         <h4 class="card-title">Winery: ${data.items[0].Winery}</h4>
                         <h4 class="card-title">Wine: ${data.items[0].Name}</h4>
@@ -403,7 +403,7 @@ $('.fa').on('click', function(){
                 console.log('ablba');
                 let print = `
                     <h4>${data.items[0].Varietal}</h4>
-                    <img class="card-img-top img-responsive" src="assets/images/albarino.jpg" id="photoA" alt="albarino">
+                    <img class="card-img-top img-responsive" src="assets/images/albarino.jpg" id="photoA" alt="Albarino">
                     <div class="card-block">
                         <h4 class="card-title">Winery: ${data.items[0].Winery}</h4>
                         <h4 class="card-title">Wine: ${data.items[0].Name}</h4>
@@ -428,7 +428,7 @@ $('.fa').on('click', function(){
                 console.log('neb');
                 let print = `
                     <h4>${data.items[0].Varietal}</h4>
-                    <img class="card-img-top img-responsive" src="assets/images/nebbiolo.jpg" id="photoA" alt="albarino">
+                    <img class="card-img-top img-responsive" src="assets/images/nebbiolo.jpg" id="photoA" alt="Nebbiolo">
                     <div class="card-block">
                         <h4 class="card-title">Winery: ${data.items[0].Winery}</h4>
                         <h4 class="card-title">Wine: ${data.items[0].Name}</h4>
@@ -455,7 +455,7 @@ $('.fa').on('click', function(){
                 console.log('pinot gri');
                 let print = `
                     <h4>${data.items[0].Varietal}</h4>
-                    <img class="card-img-top img-responsive" src="assets/images/pinot-gri.jpg" id="photoA" alt="albarino">
+                    <img class="card-img-top img-responsive" src="assets/images/pinot-gri.jpg" id="photoA" alt="Pinot Gri">
                     <div class="card-block">
                         <h4 class="card-title">Winery: ${data.items[0].Winery}</h4>
                         <h4 class="card-title">Wine: ${data.items[0].Name}</h4>
@@ -478,10 +478,10 @@ $('.fa').on('click', function(){
                 $('#cardPrint').html(print);
               };
               if (grape === 'Barbera') {
-                console.log('barb');
+                console.log('barbera');
                 let print = `
                     <h4>${data.items[0].Varietal}</h4>
-                    <img class="card-img-top img-responsive" src="assets/images/barbera.jpg" id="photoA" alt="albarino">
+                    <img class="card-img-top img-responsive" src="assets/images/barbera.jpg" id="photoA" alt="Barbera">
                     <div class="card-block">
                         <h4 class="card-title">Winery: ${data.items[0].Winery}</h4>
                         <h4 class="card-title">Wine: ${data.items[0].Name}</h4>
@@ -508,7 +508,7 @@ $('.fa').on('click', function(){
                 console.log('sangio');
                 let print = `
                     <h4>${data.items[0].Varietal}</h4>
-                    <img class="card-img-top img-responsive" src="assets/images/sangiovese.jpg" id="photoA" alt="albarino">
+                    <img class="card-img-top img-responsive" src="assets/images/sangiovese.jpg" id="photoA" alt="Sangiovese">
                     <div class="card-block">
                         <h4 class="card-title">Winery: ${data.items[0].Winery}</h4>
                         <h4 class="card-title">Wine: ${data.items[0].Name}</h4>
@@ -536,7 +536,7 @@ $('.fa').on('click', function(){
                 console.log('no more');
                 let print = `
                     <h4>${data.items[0].Varietal}</h4>
-                    <img class="card-img-top img-responsive" src="assets/images/merlot.jpg" id="photoA" alt="albarino">
+                    <img class="card-img-top img-responsive" src="assets/images/merlot.jpg" id="photoA" alt="Merlot">
                     <div class="card-block">
                         <h4 class="card-title">Winery: ${data.items[0].Winery}</h4>
                         <h4 class="card-title">Wine: ${data.items[0].Name}</h4>
