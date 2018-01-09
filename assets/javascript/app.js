@@ -3,6 +3,7 @@ $(window).on('load', function() {
     // initApp();
     $("#signInModal").modal("show");
     $(".team-clean").hide();
+     $(".contact-clean").hide();
     // $("#home").hide();
     $(".wine-cellar").hide();
     $(".log-in").click(function() {
@@ -16,6 +17,8 @@ $(window).on('load', function() {
         $(".signIn").addClass("inactive-dx");
         $(".signIn").removeClass("active-dx");
         $(".signUp").removeClass("inactive-sx");
+
+
     });
     // Validating Empty Field
     function check_empty() {
@@ -585,14 +588,26 @@ $("#about").on("click", function() {
     console.log("clicked about")
     $(".team-clean").show();
     $("#mainPage").hide();
+    $(".contact-clean").hide();
+    $(".wine-cellar").hide();
 })
 $("#aboutPage").on("click", function() {
     console.log("clicked about")
     $(".team-clean").show();
+    $(".wine-cellar").hide();
+    $(".contact-clean").hide();
     $("#mainPage").hide();
 })
+
+
+//==========================home=============================//
 $("#home").on("click", function() {
     console.log("clicked")
+    $(".team-clean").hide();
+    $("#mainPage").show();
+})
+
+$("#homePage").on("click", function(){
     $(".team-clean").hide();
     $("#mainPage").show();
 })
@@ -609,3 +624,30 @@ $("#home").on("click", function() {
     $(".wine-cellar").hide();
     $("#mainPage").show();
 })
+
+//=================contact page================================//
+
+$("#contactPage").on("click", function(){
+    console.log('contact');
+    $(".contact-clean").show();
+    $(".wine-cellar").hide();
+    $(".team-clean").hide();
+    $("#mainPage").hide();
+})
+
+$("#home").on("click", function(){
+    console.log('contact');
+    $(".contact-clean").hide();
+    $("#mainPage").show();
+})
+
+$("#homePage").on("click", function(){
+    $(".contact-clean").hide();
+    $("#mainPage").show();
+})
+
+
+
+
+
+

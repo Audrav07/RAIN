@@ -661,7 +661,7 @@ h2 {
 p {
   color: #001818;
 }
-.card animated fadeIn {}
+/*.card animated fadeIn {}*/
 .cardcontainer {
   height: 100%;
   position: absolute;
@@ -803,3 +803,7 @@ p.card-text {
   color: #fff;
   -webkit-font-smoothing: antialiased;
 }
+
+
+
+
