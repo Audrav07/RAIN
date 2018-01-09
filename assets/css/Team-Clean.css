@@ -28,7 +28,10 @@
 }
 .team-clean .people {
   padding-bottom: 40px;
+  margin-left:110px;
+
 }
+
 .team-clean .item {
   text-align: center;
   padding-top: 50px;
@@ -92,7 +95,7 @@
   -webkit-background-clip: padding-box;
   -moz-border-radius: 60px;
   -moz-background-clip: padding;
-  border-radius: 60px;
+/*  border-radius: 60px;*/
   background-clip: padding-box;
   margin: 7px 0 0 5px;
   background-size: cover;
