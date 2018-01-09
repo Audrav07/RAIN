@@ -771,10 +771,31 @@ p.card-text {
 .card-block {
   max-height: 100%;
 }
-#map {
-  height: 400px;
-  width: 500px;
+
+/*map size*/ 
+@media screen and (min-width:950px) {
+  #map {
+    height: 524px;
+    width: 655px;
+    margin: auto;
+  }
 }
+@media screen and (max-width:950px) {
+  #map {
+    height: 400px;
+    width: 500px;
+    margin: auto;
+  }
+}
+@media screen and (max-width:750px) {
+  #map {
+    height: 264px;
+    width: 330px;
+    margin: auto;
+  }
+}
+
+
 .text-dark {
   font-family: 'Roboto', sans-serif;
   /*    font-weight: 300;*/
