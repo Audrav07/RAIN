@@ -160,9 +160,9 @@ and your password to join.
    
     <a href="#" class="fa fa-window-close" aria-hidden="true"></a>
     <div id="cardPrint">
-        <!-- <img class="card-img-top img-responsive" src="assets/images/albarino.jpg" id="photoA" alt="albarino">
+        <img class="card-img-top img-responsive" src="assets/images/albarino.jpg" id="photoA" alt="albarino">
 
-        <div class="card-block">
+        <div class="index__wine-info card-block">
             <h4 class="card-title">Label 1</h4>
 
             <h4 class="card-title">Label 2</h4>
@@ -179,14 +179,9 @@ and your password to join.
             <p class="card-text">
                 Praesent ac nisi nec lorem facilisis laoreet. Duis elit quam, blandit id euismod ut, sodales vel magna. Donec gravida enim euismod posuere interdum. Praesent sodales eget diam vitae blandit. Sed condimentum molestie erat eu tincidunt. Quisque bibendum ullamcorper finibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin ut aliquet nibh. Fusce scelerisque a lorem ut ultrices. Proin convallis metus ac ante condimentum, ut congue justo mattis. Quisque ultrices id mauris vitae dignissim. Pellentesque vel orci velit. Mauris eget hendrerit ex, eget volutpat eros. Pellentesque in nisi turpis. Maecenas tempor nisi vitae odio mattis, ac volutpat nunc mattis. Integer lectus dui, vehicula nec fermentum vel, tincidunt non massa.
             </p>
-
-            <p>
-
-                map goes here
-                <img class="google" src="assets/images/SFmap.png" id="map" alt="googlemap">
-            </p>
-            
-        </div> -->
+        </div>
+        <div id="map">
+                </div>
     </div>
 </div>
 
@@ -276,9 +271,59 @@ and your password to join.
 
 <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
     <script src="assets/js/jquery.min.js"></script>
+    <script>
+        var map;
+        let cityToSearch = 'USA';
+
+        function mapInitialization() {
+            findLocation(cityToSearch);
+        }
+
+        function findLocation(location) {
+            const queryUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${location}&key=AIzaSyDb4uBl0aaR-tUU5eHUyT-WcDZP7d1YHuQ`;
+
+            $.ajax({
+                url: queryUrl,
+                method: 'GET'
+            }).done(function(response) {
+                initMap(response.results[0].geometry.location, cityToSearch);
+            });
+
+        };
+        var countries = {
+            spain: 5,
+            usa: 3,
+            france: 5,
+            italy: 5,
+            germany: 5,
+            argentina: 4,
+            southafrica: 4,
+            newzealand: 5,
+            australia: 4
+            };
+            const chooseYourZoom = (country)=> {
+                const keyName = country.toLowerCase().replace(' ', '');
+                console.log('ZOOM LEVEL',countries[keyName]);
+                return countries[keyName];
+            };
+            
+        function initMap(obj) {
+
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: {
+                    lat: obj.lat,
+                    lng: obj.lng
+                },
+                zoom: chooseYourZoom(cityToSearch)
+            });
+
+
+        }
+    </script>
      <script src="./assets/javascript/app.js"></script>
        <script src="assets/javascript/userAuth.js"></script>
      <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDb4uBl0aaR-tUU5eHUyT-WcDZP7d1YHuQ&callback=mapInitialization" async defer></script>
 
 </body>
 
