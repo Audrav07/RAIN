@@ -53,6 +53,7 @@ $('.fa').on('click', function() {
 })
 //======================= end card ===============================//
 //=================== search function ============================//
+let cityToSearch = new String();
 function wineSearch(value) {
     let key = new String();
     //get access to the wine API
@@ -113,11 +114,7 @@ function wineSearch(value) {
                         <h6 class="text-muted">Acidity (sour): <span class="text-dark">Medium to Medium-high</span></h6>
                         <h6 class="text-muted">Tannin (bitter): <span class="text-dark">Medium to Medium-high</span></h6>
 
-                        <p>
-
-                            map goes here
-                            <img class="google" src="assets/images/SFmap.png" id="map" alt="googlemap">
-                        </p>
+                        <div id="map"></div>
                       
                       <div>
 
@@ -145,11 +142,7 @@ function wineSearch(value) {
                         <h6 class="text-muted">Acidity (sour): <span class="text-dark">Medium-high</span></h6>
                         <h6 class="text-muted">Tannin (bitter): <span class="text-dark">Medium-high</span></h6>
 
-                        <p>
-
-                            map goes here
-                            <img class="google" src="assets/images/SFmap.png" id="map" alt="googlemap">
-                        </p>
+                        <div id="map"></div>
                          
                     </div>
                 `;
@@ -175,11 +168,7 @@ function wineSearch(value) {
                         <h6 class="text-muted">Acidity (sour): <span class="text-dark">Medium-high</span></h6>
                         <h6 class="text-muted">Tannin (bitter): <span class="text-dark">Medium-low</span></h6>
 
-                        <p>
-
-                            map goes here
-                            <img class="google" src="assets/images/SFmap.png" id="map" alt="googlemap">
-                        </p>
+                        <div id="map"></div>
                         
                     </div>
                 `;
@@ -205,11 +194,7 @@ function wineSearch(value) {
                         <h6 class="text-muted">Oak: <span class="text-dark">Can be oaked</span></h6>
                         <h6 class="text-muted">Acidity (sour): <span class="text-dark">Medium to medium-high</span></h6>
 
-                        <p>
-
-                            map goes here
-                            <img class="google" src="assets/images/SFmap.png" id="map" alt="googlemap">
-                        </p>
+                        <div id="map"></div>
                         
                     </div>
                 `;
@@ -236,11 +221,7 @@ function wineSearch(value) {
                         <h6 class="text-muted">Oak: <span class="text-dark">When oaked will taste buttery</span></h6>
                         <h6 class="text-muted">Acidity (sour): <span class="text-dark">Medium-low (warm climate) to medium-high (unoaked/cool climate)</span></h6>
 
-                        <p>
-
-                            map goes here
-                            <img class="google" src="assets/images/SFmap.png" id="map" alt="googlemap">
-                        </p>
+                        <div id="map"></div>
                         
                     </div>
                 `;
@@ -265,11 +246,7 @@ function wineSearch(value) {
                         </p>
                         <h6 class="text-muted">Acidity (sour): <span class="text-dark">High</span></h6>
 
-                        <p>
-
-                            map goes here
-                            <img class="google" src="assets/images/SFmap.png" id="map" alt="googlemap">
-                        </p>
+                        <div id="map"></div>
                         
                     </div>
                 `;
@@ -294,11 +271,7 @@ function wineSearch(value) {
                         </p>
                         <h6 class="text-muted">Acidity (sour): <span class="text-dark">Medium-low</span></h6>
 
-                        <p>
-
-                            map goes here
-                            <img class="google" src="assets/images/SFmap.png" id="map" alt="googlemap">
-                        </p>
+                        <div id="map"></div>
                         
                     </div>
                 `;
@@ -324,11 +297,7 @@ function wineSearch(value) {
                         <h6 class="text-muted">Acidity (sour): <span class="text-dark">Medium</span></h6>
                         <h6 class="text-muted">Tannin (bitter): <span class="text-dark">Medium</span></h6>
 
-                        <p>
-
-                            map goes here
-                            <img class="google" src="assets/images/SFmap.png" id="map" alt="googlemap">
-                        </p>
+                        <div id="map"></div>
                         
                     </div>
                 `;
@@ -355,11 +324,7 @@ function wineSearch(value) {
                         <h6 class="text-muted">Acidity (sour): <span class="text-dark">Medium-high</span></h6>
                         <h6 class="text-muted">Tannin (bitter): <span class="text-dark">Medium-high</span></h6>
 
-                        <p>
-
-                            map goes here
-                            <img class="google" src="assets/images/SFmap.png" id="map" alt="googlemap">
-                        </p>
+                        <div id="map"></div>
                         
                     </div>
                 `;
@@ -385,11 +350,7 @@ function wineSearch(value) {
                         <h6 class="text-muted">Acidity (sour): <span class="text-dark">Medium-high</span></h6>
                         <h6 class="text-muted">Tannin (bitter): <span class="text-dark">Medium-low</span></h6>
 
-                        <p>
-
-                            map goes here
-                            <img class="google" src="assets/images/SFmap.png" id="map" alt="googlemap">
-                        </p>
+                        <div id="map"></div>
                         
                     </div>
                 `;
@@ -413,11 +374,7 @@ function wineSearch(value) {
                         </p>
                         <h6 class="text-muted">Acidity (sour): <span class="text-dark">High</span></h6>
 
-                        <p>
-
-                            map goes here
-                            <img class="google" src="assets/images/SFmap.png" id="map" alt="googlemap">
-                        </p>
+                        <div id="map"></div>
                         
                     </div>
                 `;
@@ -443,11 +400,7 @@ function wineSearch(value) {
                         <h6 class="text-muted">Acidity (sour): <span class="text-dark">High</span></h6>
                         <h6 class="text-muted">Tannin (bitter): <span class="text-dark">High</span></h6>
 
-                        <p>
-
-                            map goes here
-                            <img class="google" src="assets/images/SFmap.png" id="map" alt="googlemap">
-                        </p>
+                        <div id="map"></div>
                         
                     </div>
                 `;
@@ -472,11 +425,7 @@ function wineSearch(value) {
                         </p>
                         <h6 class="text-muted">Acidity (sour): <span class="text-dark">Medium to medium-high</span></h6>
 
-                        <p>
-
-                            map goes here
-                            <img class="google" src="assets/images/SFmap.png" id="map" alt="googlemap">
-                        </p>
+                        <div id="map"></div>
                         
                     </div>
                 `;
@@ -502,11 +451,7 @@ function wineSearch(value) {
                         <h6 class="text-muted">Acidity (sour): <span class="text-dark">High</span></h6>
                         <h6 class="text-muted">Tannin (bitter): <span class="text-dark">Low</span></h6>
 
-                        <p>
-
-                            map goes here
-                            <img class="google" src="assets/images/SFmap.png" id="map" alt="googlemap">
-                        </p>
+                        <div id="map"></div>
                         
                     </div>
                 `;
@@ -533,11 +478,7 @@ function wineSearch(value) {
                         <h6 class="text-muted">Acidity (sour): <span class="text-dark">High</span></h6>
                         <h6 class="text-muted">Tannin (bitter): <span class="text-dark">High</span></h6>
 
-                        <p>
-
-                            map goes here
-                            <img class="google" src="assets/images/SFmap.png" id="map" alt="googlemap">
-                        </p>
+                        <div id="map"></div>
                         
                     </div>
                 `;
@@ -563,16 +504,16 @@ function wineSearch(value) {
                         <h6 class="text-muted">Acidity (sour): <span class="text-dark">Medium</span></h6>
                         <h6 class="text-muted">Tannin (bitter): <span class="text-dark">Medium</span></h6>
 
-                        <p>
-
-                            map goes here
-                            <img class="google" src="assets/images/SFmap.png" id="map" alt="googlemap">
-                        </p>
+                        <div id="map"></div>
                         
                     </div>
                 `;
-            $('#cardPrint').html(print);
+            $('#cardPrint').html(print);   
         };
+
+            cityToSearch = data.items[0].Country;
+            console.log(cityToSearch);
+            mapInitialization(cityToSearch);
     });
 };
 
@@ -580,6 +521,59 @@ function spaceReplace(wineInput) {
     return wineInput.split(' ').join('%20');
 };
 //==================== end search function ====================//
+
+//======================== map funtion =============================//
+    
+            var map;
+            
+ 
+            function mapInitialization(cityToSearch) {
+                findLocation(cityToSearch);
+            }
+ 
+            function findLocation(location) {
+                const queryUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${location}&key=AIzaSyDb4uBl0aaR-tUU5eHUyT-WcDZP7d1YHuQ`;
+ 
+                $.ajax({
+                    url: queryUrl,
+                    method: 'GET'
+                }).done(function(response) {
+                    initMap(response.results[0].geometry.location, cityToSearch);
+                });
+ 
+            };
+            var countries = {
+                spain: 5,
+                usa: 3,
+                france: 5,
+                italy: 5,
+                germany: 5,
+                argentina: 4,
+                southafrica: 4,
+                newzealand: 5,
+                australia: 4
+            };
+            const chooseYourZoom = (country)=> {
+                const keyName = country.toLowerCase().replace(' ', '');
+                console.log('ZOOM LEVEL',countries[keyName]);
+                return countries[keyName];
+            };
+             
+            function initMap(obj) {
+ 
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: {
+                    lat: obj.lat,
+                    lng: obj.lng
+                },
+                zoom: chooseYourZoom(cityToSearch)
+            });
+ 
+ 
+            }
+    
+//======================== map funtion =============================//
+
 //======================== about page ===============================//
 $("#about").on("click", function() {
     console.log("clicked about")
