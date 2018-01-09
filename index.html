@@ -1,167 +1,185 @@
 <!DOCTYPE html>
-<html>
 
+<html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wine App</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
-    
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/team-clean.css">
-   
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
+    <title>Wine App</title>
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/fonts/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=ABeeZee" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/team-clean.css" rel="stylesheet">
 </head>
 
 <body>
-
     <!-- navigation bar -->
+
+
     <div>
         <nav class="navbar navbar-light navbar-expand-md navigation-clean">
-            <div class="container"><a class="navbar-brand" href="#">Veeno</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse"
-                    id="navcol-1">
+            <div class="container">
+                <a class="navbar-brand" href="#">Veeno</a><button class="navbar-toggler"
+                data-target="#navcol-1" data-toggle="collapse"><span class="sr-only">Toggle
+                navigation</span><span class="navbar-toggler-icon"></span></button>
+
+                <div class="collapse navbar-collapse" id="navcol-1">
                     <ul class="nav navbar-nav ml-auto">
-                        <li class="nav-item" role="presentation"><a class="nav-link " href="#" id="about">About </a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="#" id="signUp" data-toggle="modal" data-target="#modalsignUpForm">Sign Up</a></li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" href="#" id="about">About</a>
+                        </li>
 
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="#" id="signIn" data-toggle="modal" data-target="#modalsignInForm">Sign In</a></li>
- 
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="#" id="home">Home</a></li>
 
-                        <li class="dropdown "><a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="true" href="#" id="menu">Categories </a>
-                            <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#" id="Cellar">Cellar </a><a class="dropdown-item" role="presentation" href="#" id="Restaurants">Restaurants </a><a class="dropdown-item" id="signOut" role="presentation" href="#">Log Out</a></div>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" data-target="#modalsignUpForm" data-toggle="modal"
+                            href="#" id="signUp">Sign Up</a>
+                        </li>
+
+
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" data-target="#modalsignInForm" data-toggle="modal"
+                            href="#" id="signIn">Sign In</a>
+                        </li>
+
+
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" href="#" id="home">Home</a>
+                        </li>
+
+
+                        <li class="dropdown">
+                            <a aria-expanded="true" class="dropdown-toggle nav-link dropdown-toggle"
+                            data-toggle="dropdown" href="#" id="menu">Categories</a>
+
+                            <div class="dropdown-menu" role="menu">
+                                <a class="dropdown-item" href="#" id="cellar" role=
+                                "presentation">Cellar</a> <a class="dropdown-item" href="#" id=
+                                "Restaurants" role="presentation">Restaurants</a> <a class=
+                                "dropdown-item" href="#" id="signOut" role="presentation">Log Out</a>
+                            </div>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </div>
-   
-   
-  
+    <!-- Modal for sign in and sign up-->
 
-<!-- Modal for sign in and sign up-->
-<div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-   
 
-    <div class="signUp" id="mySignUpForm">
-        <h3>Create Your Account</h3>
-        <p>Just enter your email address</br>
-and a password to join.
-        </p>
-        <input class="w100" type="email" placeholder=" Email" id="user-email" reqired autocomplete='off' />
-        <input type="user-name" placeholder=" Username" id="user-name" reqired />
-        <input type="password" placeholder=" Password" id="userPassword" reqired />
-        <button class="form-btn sx log-in" id="login" type="button" >Log In</button>
-        <button class="form-btn dx" id="signUpBtn" type="submit" data-dismiss="modal">Sign Up</button>
+    <div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade"
+    id="signInModal" role="dialog" tabindex="-1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="signUp" id="mySignUpForm">
+                    <h3>Create Your Account</h3>
+
+
+                    <p>Just enter your email address<br>
+                    and a password to join.</p>
+                    <input autocomplete='off' class="w100" id="user-email" placeholder=
+                    " Email" type="email"> <input id="user-name" placeholder=" Username" type=
+                    "user-name"> <input id="userPassword" placeholder=" Password" type=
+                    "password"> <button class="form-btn sx log-in" id="login" type=
+                    "button">Log In</button> <button class="form-btn dx" data-dismiss="modal"
+                    id="signUpBtn" type="submit">Sign Up</button>
+                </div>
+
+
+                <div class="signIn" id="mySignInForm">
+                    <h3>Welcome<br>
+                    Back!</h3>
+                    <br>
+                    <input autocomplete='off' id="user-email" placeholder=" Email/Username"
+                    type="email"> <input id="currentPassword" placeholder="Password" type=
+                    "password"> <button class="form-btn sx back" id="backBtn" type=
+                    "button">Back</button> <button class="form-btn dx" data-dismiss="modal"
+                    id="signInBtn" type="submit">Log In</button>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="signIn" id="mySignInForm">
-        <h3>Welcome</br>Back!</h3>
-        <!-- <button class="fb" type="button">Log In With Facebook</button>
-        <p>- or -</p> -->
-        <br>
-        <input type="email" placeholder=" Email/Username" autocomplete='off' id="user-email" reqired />
-        <input type="password" placeholder="Password" id="currentPassword" reqired />
-        <button class="form-btn sx back" id="backBtn" type="button">Back</button>
-        <button class="form-btn dx" id="signInBtn" type="submit" data-dismiss="modal" >Log In</button>
-    </div>
-     </div>
-</div>
-</div>
-</div>
-</div>
-
-
-
-<!-- 
+    <!-- 
 sign up form -->
 
-<div id="modalsignUpForm" class="modal fade">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-           
 
-<div class="signUpModal" id="mySignUpForm-2">
-        <h3>Create Your Account</h3>
-        <p>Just enter your email address</br>
-and your password to join.
-        </p>
-        <input class="w100" type="email" placeholder="Email" id="user-email" reqired autocomplete='off' />
-        <input type="username" placeholder="Username" id="user-name" reqired />
-        <input type="password" placeholder="Password" id="userPassword" reqired />
-     <button class="form-btn dxxx" id="signUpBtn-2" type="submit" data-dismiss="modal">Sign Up</button>
+    <div class="modal fade" id="modalsignUpForm">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="signUpModal" id="mySignUpForm-2">
+                    <h3>Create Your Account</h3>
+
+
+                    <p>Just enter your email address<br>
+                    and your password to join.</p>
+                    <input autocomplete='off' class="w100" id="user-email" placeholder="Email"
+                    type="email"> <input id="user-name" placeholder="Username" type=
+                    "username"> <input id="userPassword" placeholder="Password" type=
+                    "password"> <button class="form-btn dxxx" data-dismiss="modal" id=
+                    "signUpBtn-2" type="submit">Sign Up</button>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-</div>
-</div>
+    <!-- sign in form navbar-->
 
 
-<!-- sign in form navbar-->
-
-<div id="modalsignInForm" class="modal fade">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-
-<div class="signInForm" id="mySignInForm-2">
-        <h3 class="welcome">Welcome</br>Back!</h3>
-        <br>
-       <!--  <button class="fb" type="button">Log In With Facebook</button>
+    <div class="modal fade" id="modalsignInForm">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="signInForm" id="mySignInForm-2">
+                    <h3 class="welcome">Welcome<br>
+                    Back!</h3>
+                    <br>
+                    <!--  <button class="fb" type="button">Log In With Facebook</button>
         <p class="or">- or -</p> -->
-        <input type="email" class="inputEmail" placeholder=" Email/Username" autocomplete='off' id="user-email" reqired />
-        <input type="password" class="inputPassword" placeholder=" Password" id="currentPassword" reqired />
-        
-        <button class="form-btn dxx" id="signInBtn-2" type="submit" data-dismiss="modal">Log In</button>
-
+                     <input autocomplete='off' class="inputEmail" id="user-email" placeholder=
+                    " Email/Username" type="email"> <input class="inputPassword" id=
+                    "currentPassword" placeholder=" Password" type="password"> <button class=
+                    "form-btn dxx" data-dismiss="modal" id="signInBtn-2" type="submit">Log
+                    In</button>
+                </div>
+            </div>
+        </div>
     </div>
-     </div>
-</div>
-</div>
+    <!--    inital page    -->
 
-
-
-
-
-
-
-
-
-
-<!--    inital page    -->                           
 
     <div id="mainPage">
         <div class="jumbotron">
             <h1>Browse Wines</h1>
+
+
             <div class="search-form">
                 <div class="input-group">
-                    <div class="input-group-addon"><span><i class="fa fa-search"></i></span></div>
-                    <input class="form-control" id="searchValue" type="text" placeholder="I am looking for..">
-                    <div class="input-group-btn"><button class="btn btn-light" id="searchButton" type="button" data-toggle="button">Search </button></div>
+                    <div class="input-group-addon">
+                        <span><i class="fa fa-search"></i></span>
+                    </div>
+                    <input class="form-control" id="searchValue" placeholder=
+                    "I am looking for.." type="text">
+
+                    <div class="input-group-btn">
+                        <button class="btn btn-light" data-toggle="button" id="searchButton"
+                        type="button">Search</button>
+                    </div>
                 </div>
             </div>
-            <p></p>
+
+
+            <p>
+            </p>
         </div>
     </div>
-
-                                            <!-- CARDS -->
-
-                                          
- 
- 
+    <!-- CARDS -->
 
 
-<div class="cardcontainer">
+    <div class="cardcontainer">
+        <div class="card animated fadeIn">
+            <a aria-hidden="true" class="fa fa-window-close" href="#"></a>
 
-<div class="card animated fadeIn">
-   
-    <a href="#" class="fa fa-window-close" aria-hidden="true"></a>
-    <div id="cardPrint">
-        <!-- <img class="card-img-top img-responsive" src="assets/images/albarino.jpg" id="photoA" alt="albarino">
+            <div id="cardPrint">
+                <!-- <img class="card-img-top img-responsive" src="assets/images/albarino.jpg" id="photoA" alt="albarino">
 
         <div class="card-block">
             <h4 class="card-title">Label 1</h4>
@@ -188,13 +206,10 @@ and your password to join.
             </p>
             
         </div> -->
+            </div>
+        </div>
     </div>
-</div>
-
-</div>
-
-
-<!-- 
+    <!-- 
     <div class="cardpop">
         <div class="fadein">
         <img class="card-img-top" data-src="holder.js/100px180/" alt="100%x180" style="height: 180px; width: 100%; display: block;" data-holder-rendered="true">
@@ -205,82 +220,185 @@ and your password to join.
   </div>
 </div>
 </div> -->
- 
-                        <!-- About Us -->
+    <!-- About Us -->
 
-                        
-<div class="team-clean">
+
+    <div class="team-clean">
         <div class="container">
             <div class="intro">
-                <h2 class="text-center">Our Amazing Team </h2>
-                <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae. </p>
+                <h2 class="text-center">Our Amazing Team</h2>
+
+
+                <p class="text-center">Nothing to wine about here! We are your all-in-one wine app delivering you information to make the right choice for all your wine needs.</p>
             </div>
+
+
             <div class="row people">
-                <div class="col-md-6 col-lg-4 item"><img class="rounded-circle" src="assets/images/ramona.jpg"> 
+                <div class="col-md-6 col-lg-4 item">
+                    <img class="rounded-circle" src="assets/images/ramona.jpg">
+
                     <h3 class="name">Audrey Davis</h3>
-                    <p class="title">Web developer</p>
-                    <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, et interdum justo suscipit id. Etiam dictum feugiat tellus, a semper massa. </p>
-                    <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+
+
+                    <p class="title">Web Developer</p>
+
+                    <div class="social">
+                        <a href="https://github.com/Audrav07"><i class=
+                        "fa fa-github" aria-hidden="true" ></i></a><a href=
+                        "https://www.linkedin.com/in/audreykdavis/"><i class=
+                        "fa fa-linkedin" aria-hidden="true" ></i></a>
+                    </div>
                 </div>
-                <div class="col-md-6 col-lg-4 item"><!-- <img class="rounded-circle" src="assets/img/2.jpg"> -->
+
+
+                <div class="col-md-6 col-lg-4 item">
+                    <img class="rounded-circle2" id="ianImage" src="assets/images/aboutIMG.jpeg">
+
+
                     <h3 class="name">Ian Haizlip</h3>
-                    <p class="title">web developer</p>
-                    <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, et interdum justo suscipit id. Etiam dictum feugiat tellus, a semper massa. </p>
-                    <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+
+
+                    <p class="title">Web Developer</p>
+
+
+                    <div class="social">
+                        <a href="https://github.com/ianhaizlip"><i class=
+                        "fa fa-github"></i></a><a href=
+                        "https://www.linkedin.com/in/ian-haizlip-34b95554/"><i class=
+                        "fa fa-linkedin"></i></a>
+                    </div>
                 </div>
-                <div class="col-md-6 col-lg-4 item"><!-- <img class="rounded-circle" src="assets/img/3.jpg"> -->
+            </div>
+
+            <div class="row people">
+                <div class="col-md-6 col-lg-4 item">
+                    <!-- <img class="rounded-circle" src="assets/img/3.jpg"> -->
+
+
                     <h3 class="name">Nicholas Cheong</h3>
-                    <p class="title">web developer</p>
-                    <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, et interdum justo suscipit id. Etiam dictum feugiat tellus, a semper massa. </p>
-                    <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+
+
+                    <p class="title">Web Developer</p>
+
+                    <div class="social">
+                        <a href="#"><i class="fa fa-github"></i></a><a href="#"><i class=
+                        "fa fa-linkedin"></i></a>
+                    </div>
+
+        </div>
+     
+                    <div class="col-md-6 col-lg-2 item">
+                        <img class="rounded-circle" src="assets/images/metz.jpg">
+
+
+                        <h3 class="name">Rachal Metz</h3>
+
+
+                        <p class="title">Web Developer</p>
+
+
+                        <div class="social">
+                            <a href="https://www.linkedin.com/in/rachal-metz-94b4a720/"><i class=
+                            "fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-6 col-lg-4 item"><!-- <img class="rounded-circle" src="assets/img/3.jpg"> -->
-                    <h3 class="name">Rachal Metz</h3>
-                    <p class="title">web developer</p>
-                    <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, et interdum justo suscipit id. Etiam dictum feugiat tellus, a semper massa. </p>
-                    <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
-                </div>
+            </div>
+        </div>
+ 
+
+    <!-- wine cellar  -->
+
+
+    <div class="wine-cellar">
+        <div class="container">
+            <h2 class="text-center">Your Wine Cellar</h2>
+
+
+            <div class="row wine">
+                <!-- <div class="col-md-6 col-lg-4 item"> -->
+                <!-- <img class="rounded-circle" src="assets/images/ramona.jpg">  -->
+
+
+                <h3 class="name">
+                </h3>
+
+
+                <p class="title">
+                </p>
+
+
+                <p class="description">
+                </p>
             </div>
         </div>
     </div>
-
- 
-
     <!-- footer -->
+
+
     <footer>
         <div class="row">
             <div class="col-sm-6 col-md-4 footer-navigation">
-                <h3><a href="#">Veeno</a></h3>
-                <p class="links"><a href="#">Home</a><strong> · </strong><a href="#">Cellar </a><strong> · </strong><a href="#">Restaurants </a><strong> · </strong><a href="#">About</a><strong> · </strong><a href="#">FAQ</a><strong> · </strong><a href="#">Contact</a></p>
+                <h3><a href="#">Veeno</a>
+                </h3>
+
+
+                <p class="links"><a href="#">Home</a> <strong>·</strong> <a href=
+                "#">Cellar</a> <strong>·</strong> <a href="#">Restaurants</a>
+                <strong>·</strong> <a href="#" id="aboutPage">About</a> <strong>·</strong>
+                <a href="#">FAQ</a> <strong>·</strong> <a href="#">Contact</a></p>
+
+
                 <p class="company-name">Veeno © 2018</p>
             </div>
+
+
             <div class="col-sm-6 col-md-4 footer-contacts">
-                <div><span class="fa fa-map-marker footer-contacts-icon"> </span>
-                    <p><span class="new-line-span">1901 E Asbury Ave </span> Denver, CO</p>
+                <div>
+                    <span class="fa fa-map-marker footer-contacts-icon"></span>
+
+                    <p><span class="new-line-span">1901 E Asbury Ave</span> Denver, CO</p>
                 </div>
-                <div><i class="fa fa-envelope footer-contacts-icon"></i>
-                    <p> <a href="#" target="_blank">support@Veeno.com</a></p>
+
+
+                <div>
+                    <i class="fa fa-envelope footer-contacts-icon"></i>
+
+                    <p><a href="#" target="_blank">support@Veeno.com</a>
+                    </p>
                 </div>
             </div>
-            <div class="clearfix"></div>
+
+
+            <div class="clearfix">
+            </div>
+
+
             <div class="col-md-4 footer-about">
                 <h4>About Veeno</h4>
-                <p> Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
-                </p>
-                <div class="social-links social-icons"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a><a href="#"><i class="fa fa-github"></i></a></div>
+
+
+                <p>Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod
+                convallis velit, eu auctor lacus vehicula sit amet.</p>
+
+
+                <div class="social-links social-icons">
+                    <a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class=
+                    "fa fa-twitter"></i></a><a href="#"><i class=
+                    "fa fa-linkedin"></i></a><a href="#"><i class="fa fa-github"></i></a>
+                </div>
             </div>
         </div>
-<!-- 
-        <a href="https://www.freepik.com/free-photos-vectors/icon">Icon vector created by Vectorpocket - Freepik.com</a> -->
     </footer>
-
-
-<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-    <script src="assets/js/jquery.min.js"></script>
-     <script src="./assets/javascript/app.js"></script>
-       <script src="assets/javascript/userAuth.js"></script>
-     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js">
+    </script> 
+    <script src="assets/js/jquery.min.js">
+    </script> 
+    <script src="./assets/javascript/app.js">
+    </script> 
+    <script src="assets/javascript/userAuth.js">
+    </script> 
+    <script src="assets/bootstrap/js/bootstrap.min.js">
+    </script>
 </body>
-
 </html>
