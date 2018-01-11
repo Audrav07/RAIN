@@ -36,4 +36,4 @@ when buying wine by providing a manageable amount of information.
 - Audrey Davis - [@Audrav07](https://github.com/Audrav07)
 - Ian Haizlip - [@Ianhaizlip](https://github.com/ianhaizlip)
 - Nicholas Cheong - [@Ncheong32](https://github.com/ncheong32)
-- Rachal Metz - [@Rachal80909](https://github.com/rachal80909)
+- Rachal Metz 
