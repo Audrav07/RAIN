@@ -49,12 +49,16 @@ var userSignUp = function(event) {
         var errorCode = error.code;
         var errorMessage = error.message;
         // ...
-        if (errorCode == 'auth/weak-password') {
-            alert("The password is too weak.");
-        } else {
-            alert(errorMessage);
+        if (errorCode == 'auth/email-already-in-use') {
+            console.log('email in use')
+            $state.go('register.mail_in_use')
         }
-        console.log(error);
+        // if (errorCode == 'auth/weak-password') {
+        //     alert("The password is too weak.");
+        // } else {
+        //     alert(errorMessage);
+        // }
+        // console.log(error);
     });
     $("#user-email").val("");
     $("#user-name").val("");
@@ -186,6 +190,8 @@ var initApp = function() {
             console.log("User is signed out!");
             $("#mySignUpForm-2").show();
             $("#mySignInForm-2").show();
+            $("#signInBtn-2").show();
+            $("#signUpBtn-2").show();
             $("#signIn").show();
             $("#signUp").show();
             $("#signOut").hide();
@@ -214,6 +220,30 @@ $("#mySignInForm-2").on("keypress", function(event) {
         userLogin(event);
     }
 });
+$("#signUpBtn-2").on("click", function(event) {
+    event.preventDefault();
+    console.log('user added');
+    userSignUp(event);
+    $('#mySignUpForm').hide();
+    $("#signIn").hide();
+    $("#signUp").hide();
+    $("#signUpBtn").hide();
+    $("#signUpBtn-2").hide();
+    $("#mySignUpForm-2").hide();
+    $('#mySignInForm-2').show();
+    $("#signOut").show();
+});
+//enter key on sign-up on load
+$("#mySignUpForm-2").on("keypress", function(event) {
+    if (event.which == 13) {
+        event.preventDefault();
+        console.log("enter");
+        userSignUp(event);
+    }
+});
+// $(document).ready(function(){
+//       $('.modal-backdrop').remove();
+//   });
 window.onload = function() {
     initApp();
 };
