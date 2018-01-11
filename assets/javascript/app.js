@@ -3,7 +3,7 @@ $(window).on('load', function() {
     // initApp();
     $("#signInModal").modal("show");
     $(".team-clean").hide();
-     $(".contact-clean").hide();
+    $(".contact-clean").hide();
     // $("#home").hide();
     $(".wine-cellar").hide();
     $(".log-in").click(function() {
@@ -17,8 +17,6 @@ $(window).on('load', function() {
         $(".signIn").addClass("inactive-dx");
         $(".signIn").removeClass("active-dx");
         $(".signUp").removeClass("inactive-sx");
-
-
     });
     // Validating Empty Field
     function check_empty() {
@@ -57,6 +55,7 @@ $('.fa').on('click', function() {
 //======================= end card ===============================//
 //=================== search function ============================//
 let cityToSearch = new String();
+
 function wineSearch(value) {
     let key = new String();
     //get access to the wine API
@@ -511,12 +510,11 @@ function wineSearch(value) {
                         
                     </div>
                 `;
-            $('#cardPrint').html(print);   
+            $('#cardPrint').html(print);
         };
-
-            cityToSearch = data.items[0].Country;
-            console.log(cityToSearch);
-            mapInitialization(cityToSearch);
+        cityToSearch = data.items[0].Country;
+        console.log(cityToSearch);
+        mapInitialization(cityToSearch);
     });
 };
 
@@ -524,59 +522,50 @@ function spaceReplace(wineInput) {
     return wineInput.split(' ').join('%20');
 };
 //==================== end search function ====================//
-
 //======================== map funtion =============================//
-    
-            var map;
-            
- 
-            function mapInitialization(cityToSearch) {
-                findLocation(cityToSearch);
-            }
- 
-            function findLocation(location) {
-                const queryUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${location}&key=AIzaSyDb4uBl0aaR-tUU5eHUyT-WcDZP7d1YHuQ`;
- 
-                $.ajax({
-                    url: queryUrl,
-                    method: 'GET'
-                }).done(function(response) {
-                    initMap(response.results[0].geometry.location, cityToSearch);
-                });
- 
-            };
-            var countries = {
-                spain: 5,
-                usa: 3,
-                france: 5,
-                italy: 5,
-                germany: 5,
-                argentina: 4,
-                southafrica: 4,
-                newzealand: 5,
-                australia: 4
-            };
-            const chooseYourZoom = (country)=> {
-                const keyName = country.toLowerCase().replace(' ', '');
-                console.log('ZOOM LEVEL',countries[keyName]);
-                return countries[keyName];
-            };
-             
-            function initMap(obj) {
- 
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: {
-                    lat: obj.lat,
-                    lng: obj.lng
-                },
-                zoom: chooseYourZoom(cityToSearch)
-            });
- 
- 
-            }
-    
-//======================== map funtion =============================//
+var map;
 
+function mapInitialization(cityToSearch) {
+    findLocation(cityToSearch);
+}
+
+function findLocation(location) {
+    const queryUrl =
+        `https://maps.googleapis.com/maps/api/geocode/json?address=${location}&key=AIzaSyDb4uBl0aaR-tUU5eHUyT-WcDZP7d1YHuQ`;
+    $.ajax({
+        url: queryUrl,
+        method: 'GET'
+    }).done(function(response) {
+        initMap(response.results[0].geometry.location, cityToSearch);
+    });
+};
+var countries = {
+    spain: 5,
+    usa: 3,
+    france: 5,
+    italy: 5,
+    germany: 5,
+    argentina: 4,
+    southafrica: 4,
+    newzealand: 5,
+    australia: 4
+};
+const chooseYourZoom = (country) => {
+    const keyName = country.toLowerCase().replace(' ', '');
+    console.log('ZOOM LEVEL', countries[keyName]);
+    return countries[keyName];
+};
+
+function initMap(obj) {
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: {
+            lat: obj.lat,
+            lng: obj.lng
+        },
+        zoom: chooseYourZoom(cityToSearch)
+    });
+}
+//======================== map funtion =============================//
 //======================== about page ===============================//
 $("#about").on("click", function() {
     console.log("clicked about")
@@ -592,16 +581,14 @@ $("#aboutPage").on("click", function() {
     $(".contact-clean").hide();
     $("#mainPage").hide();
 })
-
-
+//=========================end about page=========================//
 //==========================home=============================//
 $("#home").on("click", function() {
     console.log("clicked")
     $(".team-clean").hide();
     $("#mainPage").show();
 })
-
-$("#homePage").on("click", function(){
+$("#homePage").on("click", function() {
     $(".team-clean").hide();
     $("#mainPage").show();
 })
@@ -613,35 +600,36 @@ $("#cellar").on("click", function() {
     $("#mainPage").hide();
     $(".team-clean").hide();
 })
+$("#cellarPage").on("click", function() {
+    $(".wine-cellar").show();
+    $("#mainPage").hide();
+    $(".team-clean").hide();
+    $(".contact-clean").hide();
+})
 $("#home").on("click", function() {
     console.log("clicked")
     $(".wine-cellar").hide();
     $("#mainPage").show();
 })
-
+//======================end wine cellar=========================//
 //=================contact page================================//
-
-$("#contactPage").on("click", function(){
+$("#contactPage").on("click", function() {
     console.log('contact');
     $(".contact-clean").show();
     $(".wine-cellar").hide();
     $(".team-clean").hide();
     $("#mainPage").hide();
 })
-
-$("#home").on("click", function(){
+$("#home").on("click", function() {
     console.log('contact');
     $(".contact-clean").hide();
     $("#mainPage").show();
 })
-
-$("#homePage").on("click", function(){
+$("#homePage").on("click", function() {
     $(".contact-clean").hide();
+    $(".team-clean").hide();
+    $(".wine-cellar").hide();
     $("#mainPage").show();
 })
-
-
-
-
-
-
+//=====================end contact page========================//
+// $('.modal-backdrop').remove();
